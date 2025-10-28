@@ -3,7 +3,7 @@ interface Props {
   id: string | number;
   title: string;
   description: string;
-  status: 'open' | 'in-progress' | 'resolved';
+  status: 'open' | 'in_progress' | 'resolved';
   createdAt: string;
 }
 

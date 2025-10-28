@@ -101,10 +101,10 @@ const handleSaveTicket = async (ticketData: Partial<Ticket>) => {
   }
 };
 
-const handleDelete = async (id: string) => {
+const handleDelete = async (id: string | number) => {
   if (!confirm('Are you sure you want to delete this ticket?')) return;
   try {
-    const { error } = await supabase.from('tickets').delete().eq('id', id);
+    const { error } = await supabase.from('tickets').delete().eq('id', Number(id));
     if (error) throw error;
     toast.success('🗑️ Ticket deleted successfully!');
     fetchTickets();
@@ -113,6 +113,7 @@ const handleDelete = async (id: string) => {
     toast.error('Failed to delete ticket. Please retry.');
   }
 };
+
 
 const handleEdit = (id: string | number) => {
   const t = tickets.value.find((t) => t.id === Number(id));
@@ -145,7 +146,7 @@ const handleEdit = (id: string | number) => {
             :id="ticket.id"
             :title="ticket.title"
             :description="ticket.description"
-            :status="ticket.status.replace('_', '-')"
+            :status="ticket.status"
             :createdAt="ticket.created_at"
             @edit="handleEdit"
             @delete="handleDelete"
