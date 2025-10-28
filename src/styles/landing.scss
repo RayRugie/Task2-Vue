@@ -21,7 +21,7 @@ $max-width: 1440px;
   padding: 1.5rem 3rem;
   position: relative;
   z-index: 100;
-  background: transparent;
+  background: $text-dark;
 
   .logo {
     font-size: 1.5rem;
@@ -37,6 +37,7 @@ $max-width: 1440px;
     cursor: pointer;
     font-size: 1em;
     font-weight: 600;
+    text-decoration: none;
 
     &.login {
       background: transparent;
