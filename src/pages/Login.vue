@@ -1,12 +1,5 @@
 <script lang="ts" setup>
 import AuthForm from '../components/AuthForm.vue';
-import { useRouter } from 'vue-router';
-import { onMounted } from 'vue';
-const router = useRouter();
-onMounted(() => {
-  const session = typeof window !== 'undefined' ? window.localStorage.getItem('ticketapp_session') : null;
-  if (session) router.push('/dashboard');
-});
 </script>
 
 <template>
