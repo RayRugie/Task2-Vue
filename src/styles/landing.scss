@@ -19,6 +19,8 @@ $max-width: 1440px;
   justify-content: space-between;
   align-items: center;
   padding: 1.5rem 3rem;
+  position: relative;
+  z-index: 3; /* ensure above hero decorations */
   background: $text-dark;
 
   .logo {

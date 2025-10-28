@@ -10,7 +10,7 @@ import wave from '../assets/wave.svg';
         Ticketa helps teams resolve issues faster — from customer requests to
         internal operations. One dashboard. Endless clarity.
       </p>
-      <div class="cta-buttons">
+      <div class="cta-buttons" role="navigation" aria-label="Primary calls to action">
         <router-link to="/auth/signup" class="btn primary">Get Started</router-link>
         <router-link to="/auth/login" class="btn secondary">Login</router-link>
       </div>
