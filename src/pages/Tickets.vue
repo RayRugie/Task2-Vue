@@ -130,7 +130,7 @@ const handleEdit = (id: string | number) => {
       <TicketForm
         :key="formKey"
         :mode="selectedTicket ? 'edit' : 'create'"
-        :initialData="selectedTicket ? { id: selectedTicket.id, title: selectedTicket.title, description: selectedTicket.description, status: selectedTicket.status } : undefined"
+        :initialData="selectedTicket ? { id: selectedTicket.id, title: selectedTicket.title, description: selectedTicket.description, status: selectedTicket.status as any } : undefined"
         @submit="handleSaveTicket"
         @cancel="() => (selectedTicket = null)"
       />
@@ -145,7 +145,7 @@ const handleEdit = (id: string | number) => {
             :id="ticket.id"
             :title="ticket.title"
             :description="ticket.description"
-            :status="ticket.status"
+            :status="ticket.status.replace('_', '-')"
             :createdAt="ticket.created_at"
             @edit="handleEdit"
             @delete="handleDelete"

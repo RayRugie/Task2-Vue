@@ -8,7 +8,7 @@ interface Props {
 }
 
 const props = defineProps<Props>();
-const emit = defineEmits<{ (e: 'edit', id: string): void; (e: 'delete', id: string): void }>();
+const emit = defineEmits<{ (e: 'edit', id: string | number): void; (e: 'delete', id: string | number): void }>();
 </script>
 
 <template>

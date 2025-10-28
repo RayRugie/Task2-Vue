@@ -4,7 +4,7 @@ import { ref, watch, onMounted } from 'vue';
 type TicketStatus = 'open' | 'in_progress' | 'closed';
 
 interface InitialData {
-  id?: string;
+  id?: string | number;
   title: string;
   description: string;
   status: TicketStatus;
