@@ -15,7 +15,7 @@ import Footer from '../components/Footer.vue';
 </template>
 
 <style lang="scss">
-@import '../styles/landing.scss';
+@use '../styles/landing.scss';
 </style>
 
 
