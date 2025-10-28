@@ -1,0 +1,186 @@
+$primary: #4f46e5;
+$secondary: #6366f1;
+$text-dark: #1e1e1e;
+$text-light: #f9f9f9;
+$max-width: 1440px;
+
+.landing-container {
+  max-width: $max-width;
+  margin: 0 auto;
+  overflow-x: hidden;
+  font-family: "Inter", sans-serif;
+  color: $text-dark;
+  min-height: 100vh;
+  width: 100%;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 3rem;
+  background: $text-dark;
+
+  .logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: $primary;
+  }
+
+  .nav .btn {
+    margin-left: 1rem;
+    padding: 0.6rem 1.2rem;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: 600;
+
+    &.login {
+      background: transparent;
+      color: $primary;
+    }
+
+    &.get-started {
+      background: $primary;
+      color: white;
+    }
+  }
+}
+
+.hero-container {
+  background: $text-dark !important;
+}
+.hero {
+  position: relative;
+  padding: 6rem 3rem;
+  background: linear-gradient(135deg, $primary, $secondary);
+  color: $text-light;
+  border-bottom-left-radius: 80px;
+  overflow: hidden;
+  
+
+  .hero-content {
+    max-width: 600px;
+    z-index: 2;
+    position: relative;
+
+    h2 {
+      font-size: 3rem;
+      line-height: 1.1;
+    }
+
+    p {
+      margin: 1.5rem 0;
+      font-size: 1.2rem;
+      opacity: 0.9;
+    }
+
+    .cta-buttons .btn {
+      margin-right: 1rem;
+      padding: 0.8rem 1.5rem;
+      border: none;
+      border-radius: 8px;
+      font-weight: 600;
+      cursor: pointer;
+
+      &.primary {
+        background: white;
+        color: $primary;
+      }
+
+      &.secondary {
+        background: rgba(255, 255, 255, 0.2);
+        color: white;
+      }
+    }
+  }
+
+  .decor-circle {
+    position: absolute;
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.1);
+    top: 60px;
+    right: 150px;
+    z-index: 1;
+    pointer-events: none;
+  }
+  .decor-circle1 {
+    position: absolute;
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.1);
+    top: 90px;
+    right: 190px;
+    z-index: 2;
+    pointer-events: none;
+  }
+
+
+  .wave {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    z-index: 1;
+    pointer-events: none;
+  }
+}
+
+.features {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+  padding: 6rem 3rem;
+  background: #f8f8ff;
+
+  .feature-box {
+    background: white;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+    border-radius: 16px;
+    padding: 2rem;
+    flex: 1 1 300px;
+    max-width: 340px;
+    transition: transform 0.2s ease-in-out;
+
+    &:hover {
+      transform: translateY(-5px);
+    }
+
+    h3 {
+      color: $primary;
+      margin-bottom: 0.8rem;
+    }
+
+    p {
+      color: #555;
+      font-size: 0.95rem;
+    }
+  }
+}
+
+.footer {
+  text-align: center;
+  padding: 1.5rem;
+  background: #f3f4f6;
+  color: #666;
+  font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+  .hero {
+    padding: 4rem 2rem;
+    .hero-content h2 {
+      font-size: 2rem;
+    }
+  }
+
+  .features {
+    padding: 4rem 2rem;
+  }
+}
