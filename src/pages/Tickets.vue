@@ -146,7 +146,7 @@ const handleEdit = (id: string | number) => {
             :id="ticket.id"
             :title="ticket.title"
             :description="ticket.description"
-            :status="ticket.status"
+            :status="(ticket.status === 'closed' ? 'resolved' : ticket.status.replace('_', '-')) as any"
             :createdAt="ticket.created_at"
             @edit="handleEdit"
             @delete="handleDelete"
