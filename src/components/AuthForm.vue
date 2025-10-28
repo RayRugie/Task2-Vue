@@ -65,10 +65,10 @@ const handleSubmit = async (e: Event) => {
 
       <p class="switch">
         <template v-if="props.mode === 'login'">
-          Don’t have an account? <router-link to="/signup">Sign up</router-link>
+          Don't have an account? <router-link to="/auth/signup">Sign up</router-link>
         </template>
         <template v-else>
-          Already have an account? <router-link to="/login">Login</router-link>
+          Already have an account? <router-link to="/auth/login">Login</router-link>
         </template>
       </p>
     </form>

@@ -14,8 +14,6 @@ export const router = createRouter({
   routes,
 });
 
-export default router;
-
 // Global auth guard
 router.beforeEach((to, _from, next) => {
   const requires = to.matched.some(r => (r.meta as any)?.requiresAuth);
@@ -26,5 +24,7 @@ router.beforeEach((to, _from, next) => {
   }
   next();
 });
+
+export default router;
 
 
